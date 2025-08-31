@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+langchain
+langchain-openai
+chromadb
+openai
+python-multipart
+simpleaudio; sys_platform != 'win32'

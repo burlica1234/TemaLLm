@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Smart Librarian</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <h1>Smart Librarian</h1>
+      <p class="sub">
+        Ask for a theme/author/title.
+      </p>
+
+      <div class="row">
+        <textarea id="q" rows="2" placeholder="e.g., books about friendship and magic"></textarea>
+        <button id="askBtn">Ask</button>
+        <button id="voiceBtn" class="secondary">
+          <span id="micDot" class="dot"></span> Voice
+        </button>
+      </div>
+
+      <label class="opt">
+        <input type="checkbox" id="withAudio" checked />
+        Include audio
+      </label>
+
+      <div id="voiceStatus" class="voice hidden">Voice mode: <b>off</b></div>
+      <div id="interim" class="interim hidden"></div>
+
+      <div id="error" class="error hidden"></div>
+      <div id="msgs" class="msgs"></div>
+    </section>
+  </main>
+
+  <script defer src="./script.js"></script>
+</body>
+</html>
