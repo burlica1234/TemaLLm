@@ -1,12 +1,13 @@
-
+from pathlib import Path
 import os, json
 from uuid import uuid5, NAMESPACE_DNS
 
 import chromadb
 from chromadb.utils.embedding_functions import OpenAIEmbeddingFunction
 
-JSON_PATH = "../books.json"
-DB_PATH = "../chroma_db2"
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+JSON_PATH = PROJECT_ROOT / "books.json"
+DB_PATH = PROJECT_ROOT / "chroma_db2"
 COLLECTION = "books_json"
 MODEL = "text-embedding-3-small"
 
